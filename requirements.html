@@ -33,7 +33,7 @@
                 <!-- /.col-md-8 -->
                 <div class="col-md-4">
                     <h1>Project Requirements</h1>
-                    <p></p>
+                    <p>Below are the major requirements for the proposed system. Also a a pdf of the requirements document can be seen and <a href = "files/RequirementsDocumentVersion3.0.pdf" target="_blank">downloaded here.</a> </p>
                 </div>
                 <!-- /.col-md-4 -->
                 <div class="col-md-4">
@@ -43,6 +43,86 @@
                     <img class="img-responsive img-rounded" src="images/Gale_Crater.jpg" alt=""></a>
                 </div>
 
+            </div>
+            <div class="row" style="padding-bottom:60px">
+                <h1>Functional Requirements</h1>
+
+                <h3>HiRISE and CTX</h3>
+                    <p>The system shall use the data sets provided by the HiRISE and the CTX
+                        instruments as the primary input for the tool. These datasets are provided to the
+                        public as JPEG2000 (JP2) images. As a consequence, any preprocessing
+                        of the
+                        images will require adherence to JP2 specifications.</p>
+                       <p> a. The HiRISE (High Resolution Imaging Science Experiment) provides high
+                        resolution (25 cm/pixel) images of Mars’ surface.</p>
+                       <p> b. The CTX (context camera) provides a more general overview of the surface
+                        at 6m/pixel.</p>
+                <h3>Mars Orbital Datasets</h3>
+                    <p>
+                        The system shall allow users to be able to load and georeference multiple Mars
+                        orbital datasets, identify terrain types and features, and automatically map similar
+                        features across multiple input images.
+                    </p>
+                <h3>Image Mapping</h3>
+                    <p>
+                    The system shall use HiRISE and CTX to present three Reduced Data Record
+                    (RDR) products conforming to Planetary Data System (PDS) standards.</p>
+                   <p> a. HiRISE consists of two distinct RDRs. The first being a singlecolor
+                    RDR
+                    created from redfiltered
+                    cameras with a pixel width of 20,048. The second is a
+                    threecolor
+                    product which is a composite of red, bluegreen,
+                    and nearinfrared
+                    cameras with a pixel width of 4,048. Image data shall be combined to maximize
+                    available dataset.</p>
+                    <p>b. In contrast to HiRISE, the CTX camera has a comparably lower
+                    resolution.This necessitates a manytoone
+                    and onetomany
+                    mapping algorithm
+                    to associate pixel information between the HiRISE and CTX RDRs.
+                    </p>
+                <h3>Artificial Neural Network</h3>
+                    <p>
+                        Due to the size and complexity of input RDRs, the system shall use an Artificial
+                        Neural Network (ANN) in order to minimize time required to map terrain types. A
+                        Convolutional Neural Network (CNN) which is the neural network often used for
+                        image recognition and that served as the inspiration for this project. [3]
+            
+                        CNNs are multilayer perceptrons that mimic visual perception by overlapping
+                        information segments. This also minimizes the need for image preprocessing.
+                        The ability to supervise training of the neural network layer by layer has made the
+                        CNN the prime candidate to implement neural network functionality required by
+                        the sponsor.
+                    </p>
+                <h3>Training Datasets</h3>
+                    <p>
+                        CNNs are a type of feedforward
+                        neural network, though powerful, they require
+                        relatively large datasets to adequately train the neural network on. To circumvent
+                        this issue, the system shall need tools to generate realistic and reliably labelled
+                        training datasets as the initial training dataset provided by the sponsor will be
+                        small. Mimicry of training datasets will shall utilize the following techniques
+                        stochastic downsampling, orientation inversion, and image reorganization.
+                                            </p>
+                <h3>Image Post-Processing</h3>
+                    <p>The system shall use side channel spatial information such as transparency and
+                        alpha planes, which are useful for transmitting information for processing the
+                        image for display, print, or editing. This will be utilized to maintain neural network
+                        predictions inside the output RDR, such as marking the area of interest in the
+                        transparency plane, without compromising the input RDR.</p> 
+                <h3>Algorithm Performance</h3>
+                    <p>The system shall be able to assess how well the algorithm performed by
+                        comparing the correctness of the identified terrain with the results of a
+                        humangenerated
+                        map.</p>
+                <h3>Robustness</h3>
+                    <p>
+                        The system shall be designed to handle error conditions easily, without failure.
+                        Such conditions include a tolerance of invalid datasets (non HiRISE/CTX
+                        produced data sets), unexpected operating conditions, and overfitting within
+                        machine learning algorithms.
+                    </p>
             </div>
 
 
