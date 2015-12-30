@@ -2,74 +2,116 @@
 <html>
 
 <head>
-	<meta charset="UTF-8">
-	<title> Design </title>
+    <meta charset="UTF-8">
+    <title> Team Strata </title>
 
-<!-- Bootstrap CSS files, these CSS files were not created by the Members of Team Strata. Bootstrap is a Free open source collection of CSS, and JS to create Websites. 
-License	MIT License (Apache License 2.0 prior to 3.1.0 --> 
+    <!-- Bootstrap CSS files, these CSS files were not created by the Members of Team Strata. Bootstrap is a Free open source collection of CSS, and JS to create Websites.
+    License	MIT License (Apache License 2.0 prior to 3.1.0 -->
 
-	<link rel = "stylesheet" href ="css/bootstrap.min.css">
-	<link rel = "stylesheet" href ="css/simple-sidebar.css">
+    <link rel = "stylesheet" href ="css/bootstrap.min.css">
+    <link rel = "stylesheet" href ="css/simple-sidebar.css">
 
 </head>
 
 <body>
-	
-	<div class = "header"> 
-			<nav class="navbar navbar-inverse navbar-fixed-top">
-				<div class = "conatainer-fluid">
-					<a class = "navbar-brand"> </a>
-				</div>	
-			</nav>
-	</div>
-<div class="container">	
-  <!--ADD CONTENT BELOW-->
 
+<div class = "header">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class = "conatainer-fluid">
+            <a class = "navbar-brand"> </a>
+        </div>
+    </nav>
+</div>
 
-	<div class="row row-offcanvas row-offcanvas-right">
+<div class="container">
 
+    <div id="wrapper">
+
+        <div class="col-sm-12">
+
+            <div class="row" style="padding-top: 60px;padding-bottom: 40px; background: #EEE;border-radius:4px;">
+                <!-- /.col-md-8 -->
+                <div class="col-md-6">
+                    <h1>High-Level Design</h1>
+                    <!--<p></p>-->
+                </div>
+                <!-- /.col-md-4 -->
+
+            </div>
+            <div class="row">
+
+                <div class="col-md-4">
+                    The process begins with user acquisition of the Reduced Data Record from NASA. This is composed of two JPEG-2000 images, grey-scale and rgb, and a Planetary Data System compliant label file. The data sets will be merged and serve as the input for the neural network.
+                </div>
+                <div class="col-md-8">
+                    <img class="img-responsive img-rounded" src="images/Data_Request.jpeg" alt=""> </a>
+                </div>
+            </div>
+             <div class="row">
+                 <div class="col-md-4">
+                     A subset of the data sets will be manually labelled by the user. The manual labeling will be combined with relevant RDRs used as training data for the neural network.
+                 </div>
+
+                <div class="col-md-8">
+                    <img class="img-responsive img-rounded" src="images/NN_Training.jpeg" alt=""></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    After training of the neural network, the neural network will be given unfamiliar data sets and tasked with identifying terrain types it was taught to identify. The predictions will then be displayed to the user for evaluation.
+                </div>
+
+                <div class="col-md-8">
+                    <img class="img-responsive img-rounded" src="images/NN_Prediction.jpeg" alt=""></a>
+                </div>
+            </div>
+            <div class="row" style="padding-bottom:60px">
+                <div >
+
+                </div>
+
+            </div>
+        </div>
         <!--SideBar-->
-       <div id="wrapper">
 
-        	<div id="sidebar-wrapper">
-	            <ul class="sidebar-nav">
-	                <li class="sidebar-brand">
-	                    <a href="index.html">
-	                        Team Strata 
-	                    </a>
-	                </li>
-	                <li>
-	                    <a href="project.html">Project Description</a>
-	                </li>
-	                <li>
-	                    <a href="requirements.html">Project Requirements</a>
-	                </li>
-                   <li>
-                      <a href="design.html">High-Level Design</a>
-                  </li>
-                  <li>
-                      <a href="tools.html">Tools</a>
-                  </li>
-                   <li>
-                      <a href="schedule.html">Schedule</a>
-                  </li>
-	               
-	            </ul>
-        	</div>
-    	</div>
-    </div> <!-- End Row -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                        Team Strata
+                    </a>
+                </li>
+                <li>
+                    <a href="project.html">Project Description</a>
+                </li>
+                <li>
+                    <a href="requirements.html">Project Requirements</a>
+                </li>
+                <li>
+                    <a href="design.html">High-Level Design</a>
+                </li>
+                <li>
+                    <a href="tools.html">Tools</a>
+                </li>
+                <li>
+                    <a href="schedule.html">Schedule</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- End Row -->
+
+    </div>
+    <hr>
 
 
-      <hr>
 
-  
+</div><!-- End container-->
 
- </div><!-- End container-->
-	
-	
-	 <div class="footer">
-		<nav class="navbar navbar-inverse navbar-fixed-bottom"> </nav>
-	</div>
+
+<div class="footer">
+    <nav class="navbar navbar-inverse navbar-fixed-bottom"> </nav>
+</div>
 </body>
 
 </html>
