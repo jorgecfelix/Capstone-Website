@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Team Strata </title>
+
+    <!-- Bootstrap CSS files, these CSS files were not created by the Members of Team Strata. Bootstrap is a Free open source collection of CSS, and JS to create Websites.
+    License	MIT License (Apache License 2.0 prior to 3.1.0 -->
+
+    <link rel = "stylesheet" href ="css/bootstrap.min.css">
+    <link rel = "stylesheet" href ="css/simple-sidebar.css">
+
+</head>
+
+<body>
+
+<div class = "header">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class = "conatainer-fluid">
+            <a class = "navbar-brand"> </a>
+        </div>
+    </nav>
+</div>
+
+<div class="container">
+
+    <div id="wrapper">
+
+        <div class="col-sm-12">
+
+            <div class="row" style="padding-top: 60px;padding-bottom: 40px; background: #EEE;border-radius:4px;">
+                <!-- /.col-md-8 -->
+                <div class="col-md-6">
+                    <h1>Test Plan Overview</h1>
+                    <p>Below is a small overview of the testing we conducted to evaluate our system. The design document can be <a href = "files/test.pdf" target="_blank">downloaded here.</a></p>
+                    <!--<p></p>-->
+                </div>
+                <!-- /.col-md-4 -->
+                <div class="col-md-4">
+                    <img class="img-responsive img-rounded" src="images/pia20281-full.jpg" alt=" Credit goes to NASA"> </a>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 40px;padding-bottom: 20px; background: #EEE;border-radius:4px;">
+
+                <div class="col-md-12">
+                    <h4>Unit Testing</h4>
+                    The unit testing of the image processing module will consist of testing individual extension functions. These include getDims, getImage, getTraining, getLabel, and  writeImage. The functions serve as tools to grab all the necessary information we need from the images and presents it in a constrained format required by the neural network architecture.  As these functions make use of image files and numpy array’s tests will make use of established python libraries for verification of certain aspects. 
+
+                    The unit testing of the convolutional neural network will consist of testing individual methods and functions. These include get_labeled_data, trainNetwork, makePredictions, getPredictionData, loadDataset, convolutionalNeuralNetwork, and download_image. The functions and methods serve as components that are dependent on each other to make up the neural network behavior and architecture. It should be noted that running the tests will replace and get rid of any file named “net.pickle”, so all pretrained networks should be renamed or moved in a different location prior to running the tests.
+
+                    
+                </div>
+                
+            </div>
+             <div class="row" style="padding-top: 60px;padding-bottom: 20px; background: #EEE;border-radius:4px;">
+                 <div class="col-md-6">
+                     <h4>10-Fold Cross Validation</h4>
+                     <ul>
+                        <li>Divided image data into 10 data sets or 10 sub images</li>
+                        <li>Train on 9 images</li>
+                        <li>Validate on the remaining image</li>
+                        <li>Repeat steps above 10 times until each image is used once as validation</li>
+
+                     </ul>
+                     An example of a 5-fold cross validation technique can be seen on the right. 
+                 </div>
+
+                <div class="col-md-6">
+                    <img class="img-responsive img-rounded" src="images/cross.png" alt=""></a>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 60px;padding-bottom: 60px; background: #EEE;border-radius:4px;">
+                <div class="col-md-4">
+                    <h4>Usability Testing</h4>
+                    For usability testing our team conducted a user study on the console interface we developed. The study involved our sponsor Dr. Ryan Anderson. 
+
+                </div>
+
+                <div class="col-md-4">
+                    <img class="img-responsive img-rounded" src="images/ryan.jpg" alt=""></a>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-responsive img-rounded" src="images/cmd.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <!--SideBar-->
+
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                        Team Strata
+                    </a>
+                </li>
+                <li>
+                    <a href="project.html">Project Description</a>
+                </li>
+                <li>
+                    <a href="requirements.html">Project Requirements</a>
+                </li>
+                <li>
+                    <a href="design.html">High-Level Design</a>
+                </li>
+                <li>
+                    <a href="tools.html">Tools</a>
+                </li>
+                <li>
+                    <a href="schedule.html">Schedule</a>
+                </li>
+                <li>
+                    <a href="testing.html">Test Plan</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- End Row -->
+
+    </div>
+    <hr>
+
+
+
+</div><!-- End container-->
+
+
+<div class="footer">
+    <nav class="navbar navbar-inverse navbar-fixed-bottom"> </nav>
+</div>
+</body>
+
+</html>
